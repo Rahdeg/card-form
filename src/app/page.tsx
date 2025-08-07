@@ -34,7 +34,7 @@ export default function Home() {
   const [errors, setErrors] = useState<FormErrors>({})
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  // Load data from localStorage on component mount
+
   useEffect(() => {
     const savedData = localStorage.getItem('cardFormData')
     if (savedData) {
@@ -42,7 +42,7 @@ export default function Home() {
     }
   }, [])
 
-  // Save to localStorage whenever cardData changes
+
   useEffect(() => {
     localStorage.setItem('cardFormData', JSON.stringify(cardData))
   }, [cardData])
@@ -349,7 +349,7 @@ export default function Home() {
               </Button>
             </form>
           ) : (
-            // Success State
+
             <div className="text-center space-y-8">
               <div className="flex justify-center">
                 <Image
